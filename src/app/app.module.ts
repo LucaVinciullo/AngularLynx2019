@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { ListComponent } from './components/list/list.component';
 import { DetailComponent } from './components/detail/detail.component';
 import { FeedbackComponent } from './components/feedback/feedback.component';
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
 
 
 @NgModule({
@@ -13,7 +15,9 @@ import { FeedbackComponent } from './components/feedback/feedback.component';
     AppComponent,
     ListComponent,
     DetailComponent,
-    FeedbackComponent
+    FeedbackComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
