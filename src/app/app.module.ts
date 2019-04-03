@@ -13,14 +13,11 @@ import { RegisterComponent } from './components/register/register.component';
 @NgModule({
   declarations: [
     AppComponent,
-<<<<<<< HEAD
     ListComponent,
     DetailComponent,
-    FeedbackComponent
-=======
+    FeedbackComponent,
     LoginComponent,
     RegisterComponent
->>>>>>> Login
   ],
   imports: [
     BrowserModule,
