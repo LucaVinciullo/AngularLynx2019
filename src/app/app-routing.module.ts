@@ -1,14 +1,16 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { HomepageComponent } from './components/homepage/homepage.component';
+import { ListComponent } from './components/list/list.component';
+import { FeedbackComponent } from './components/feedback/feedback.component';
+import { DetailComponent } from './components/detail/detail.component';
 
 
 const routes: Routes = [
-  /*{path: 'Homepage', component: HomepageComponent},
-  {path: 'List', component: },
-  {path: 'Cards', component: },
-  {path: 'Feedback', component: },
-  {path: 'Profilo', component: },
-  {path: 'Esci', component: } */
+  {path: 'homepage', component: HomepageComponent},
+  {path: 'list', component: ListComponent},
+  {path: 'feedback', component: FeedbackComponent},
+  {path: 'detail', component: DetailComponent}
 ]; 
 
 @NgModule({
