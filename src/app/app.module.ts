@@ -8,6 +8,10 @@ import { FeedbackComponent } from './components/feedback/feedback.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { DetailComponent } from './components/detail/detail.component';
+import { HomepageComponent } from './components/homepage/homepage.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+
+
 
 
 @NgModule({
@@ -18,12 +22,15 @@ import { DetailComponent } from './components/detail/detail.component';
     DetailComponent,
     FeedbackComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    HomepageComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
