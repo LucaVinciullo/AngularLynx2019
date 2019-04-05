@@ -17,4 +17,11 @@ export class ListComponent implements OnInit {
   ngOnInit() {
   }
 
+  setFavourite() {
+    
+  }
+  setNotFavourite(){
+
+  }
+
 }
