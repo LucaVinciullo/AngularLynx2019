@@ -8,20 +8,22 @@ import { ListItem } from 'src/app/models/list-item';
   styleUrls: ['./list.component.sass']
 })
 export class ListComponent implements OnInit {
-  private list : ListItem[];
+  private list: ListItem[];
 
   constructor(private listData: ListDataService) {
     this.list = listData.getList();
-   }
+  }
 
   ngOnInit() {
   }
 
-  setFavourite() {
-    
-  }
-  setNotFavourite(){
-
+  toggleFavorite(id: number) {
+    const itemClicked = this.list.find(item => {
+      return item.id === id;
+    });
+    if (itemClicked) {
+      itemClicked.favorite = !itemClicked.favorite;
+    }
   }
 
 }
