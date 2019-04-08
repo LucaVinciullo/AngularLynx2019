@@ -8,6 +8,7 @@ import { DetailComponent } from './components/detail/detail.component';
 import { FeedbackComponent } from './components/feedback/feedback.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
+import { CarouselComponent } from './components/carousel/carousel.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { RegisterComponent } from './components/register/register.component';
     DetailComponent,
     FeedbackComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    CarouselComponent
   ],
   imports: [
     BrowserModule,
