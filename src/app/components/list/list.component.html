@@ -19,7 +19,21 @@
                         </div>
                     </div>
                 </a>
-            </li>
-        </ng-container>
-    </ul>
+                <div class="listItem">
+                    <p class="title">{{item.title}}</p>
+                    <p>{{item.description}}</p>
+                </div>
+                <div class="icons">
+                    <i class="material-icons" (click)="toggleFavorite(item.id)">
+                            <ng-container *ngIf="!item.favorite; else other_content">
+                                favorite_border
+                            </ng-container>
+                            <ng-template #other_content>
+                                favorite
+                            </ng-template>
+                        </i>
+
+                    <i class="material-icons">share</i>
+                    <i class="material-icons">more_vert</i>
+                </div>
 </div>

@@ -13,6 +13,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 
 
 
+import { CarouselComponent } from './components/carousel/carousel.component';
 
 
 @NgModule({
@@ -26,7 +27,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     RegisterComponent,
     HomepageComponent,
     NavbarComponent,
- 
+    CarouselComponent
   ],
   imports: [
     BrowserModule,
