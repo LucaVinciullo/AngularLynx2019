@@ -1,0 +1,49 @@
+.container
+    float: left
+
+.footer 
+    position: fixed
+    left: 0
+    bottom: 0
+    width: 100%
+
+.footer li
+    display: inline
+    
+    
+.fling-minislide 
+    width: 700px
+    height: 550px
+    overflow: hidden
+    position: relative
+    float: right
+    
+    
+.fling-minislide img 
+    animation: fling-minislide 15s infinite
+    opacity: 0
+    width: 100%
+    height: auto
+    position: absolute
+
+@keyframes fling-minislide 
+    25% 
+        opacity: 1
+        
+    40% 
+        opacity: 0
+
+.fling-minislide img:nth-child(3) 
+    animation-delay: 10s
+
+.fling-minislide img:nth-child(2) 
+    animation-delay: 5s
+    
+.fling-minislide img:nth-child(1) 
+    animation-delay: 0s
+    
+
+    
+    
+
+
