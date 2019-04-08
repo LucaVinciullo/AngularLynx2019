@@ -11,6 +11,7 @@ div.left-column
     -ms-grid-column: 1
 
 div.central-column
+    margin: auto
     grid-column: 2
     -ms-grid-column: 2
 
@@ -18,10 +19,6 @@ div.right-column
     padding: 10px
     grid-column: 3
     -ms-grid-column: 3
-
-.carousel-wrapper 
-    text-align: left
-    overflow: hidden
 
 ul
     list-style-type: none
@@ -31,11 +28,6 @@ div.placeholder
     width: auto    
 div.left-align
     text-align: left
-
-img.carousel-image
-    background: black
-    height: 100px
-    width: auto
 
 h1
     font-size: 60px
@@ -59,14 +51,18 @@ button
     border: none
     height: 40px
 
-button.carousel-button
+div.carousel-container
+    float: left
+    background: black
+    width: 39%
+    height: 220px
+
+div.carousel-text
+    text-align: left
+    border: 1px solid green
     float: right
-    margin: 8px
-    height: 20px
-    width: 8px
-    border-radius: 8px
-    border: 3px solid black
-    cursor: pointer
+    width: 60%
+    height: 220px
 
 img
     margin: auto
