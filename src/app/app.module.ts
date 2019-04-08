@@ -9,6 +9,7 @@ import { FeedbackComponent } from './components/feedback/feedback.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
+import { NgImageSliderModule, NgImageSliderComponent } from 'ng-image-slider';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { CarouselComponent } from './components/carousel/carousel.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    NgImageSliderModule
   ],
   providers: [],
   bootstrap: [AppComponent]
