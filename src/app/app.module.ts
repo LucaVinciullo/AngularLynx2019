@@ -14,6 +14,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 
 
 import { CarouselComponent } from './components/carousel/carousel.component';
+import { ProfiloComponent } from './profilo/profilo.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { CarouselComponent } from './components/carousel/carousel.component';
     RegisterComponent,
     HomepageComponent,
     NavbarComponent,
-    CarouselComponent
+    CarouselComponent,
+    ProfiloComponent
   ],
   imports: [
     BrowserModule,
