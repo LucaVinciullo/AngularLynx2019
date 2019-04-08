@@ -3,4 +3,6 @@ export interface ListItem{
     title:string;
     description: string;
     image:string;
+    favorite: boolean;
+    price: number;
 } 

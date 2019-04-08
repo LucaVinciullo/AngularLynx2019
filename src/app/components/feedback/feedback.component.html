@@ -4,7 +4,7 @@
             <h4>Inviaci il tuo Feedback</h4>
             <div class="form-item">
                 <div class="icon-container">
-                    <i class="material-icons">person_outline</i>
+                    <i class="material-icons">person</i>
                 </div>
                 <div class="input-container">
                     <label for="name">Nome</label><br/>
@@ -14,7 +14,7 @@
 
             <div class="form-item">
                 <div class="icon-container">
-                    <i class="material-icons">person_outline</i>
+                    <i class="material-icons">person</i>
                 </div>
                 <div class="input-container">
                     <label for="surname">Cognome</label><br/>
@@ -24,19 +24,19 @@
 
             <div class="form-item">
                 <div class="icon-container">
-                    <i class="material-icons">person_outline</i>
+                    <i class="material-icons">wc</i>
                 </div>
                 <div class="input-container">
                     <label for="gender">Genere</label><br/>
                     <select id="gender" [(ngModel)]="model.gender" name="gender">
-                    <option selected="selected" [value]="undeclared">Non Dichiarato</option><option [value]="male">Maschio</option><option [value]="female">Femmina</option><option [value]="nonBinary">Non Binario</option>
-            </select>
+                        <option [value]="undeclared">Non Dichiarato</option><option [value]="male">Maschio</option><option [value]="female">Femmina</option><option [value]="nonBinary">Non Binario</option>
+                    </select>
                 </div>
             </div>
 
             <div class="form-item">
                 <div class="icon-container">
-                    <i class="material-icons">person_outline</i>
+                    <i class="material-icons">mail</i>
                 </div>
                 <div class="input-container">
                     <label for="email">E-mail</label><br/>
@@ -46,7 +46,7 @@
 
             <div class="form-item">
                 <div class="icon-container">
-                    <i class="material-icons">person_outline</i>
+                    <i class="material-icons">local_phone</i>
                 </div>
                 <div class="input-container">
                     <label for="telephone">Telefono</label><br/>
@@ -55,11 +55,9 @@
             </div>
 
             <div class="form-item">
-                <div class="icon-container">
-                    <i class="material-icons">person_outline</i>
-                </div>
-                <div class="input-container">
-                    <label for="comment">Commenti</label><br/>
+
+                <div id="comments">
+                    <label for="comment" id="comments-label">Commenti</label><br/>
                     <textarea required id="comment" [(ngModel)]="model.comment" name="comment"></textarea>
                 </div>
             </div>
