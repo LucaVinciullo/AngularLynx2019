@@ -24,5 +24,6 @@ residualList: ListItem[];
   }
   showCarousel(id : number){
     this.visibleId = id;
+    this.residualList = this.listDataService.getResidualList(this.id);
   }
 }
