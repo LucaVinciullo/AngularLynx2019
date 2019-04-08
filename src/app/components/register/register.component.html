@@ -1,22 +1,21 @@
-<div class= "formcontainer">
-    <div class="formdimensions">
-      <form action="/action_page.php">
+<link href="https://fonts.googleapis.com/css?family=Oxygen:400,300,700" rel="stylesheet" type="text/css"/>
+<link href="https://code.ionicframework.com/ionicons/1.4.1/css/ionicons.min.css" rel="stylesheet" type="text/css"/>
+<div class="signin cf">
+  <form>
     <div class="imgcontainer">
-      <img src="https://gamepedia.cursecdn.com/lolesports_gamepedia_en/5/58/Good_Game_Universitylogo_square.png?version=fc22e0041562d9245cf110e9dc93c6cb" alt="Avatar" class="avatar">
+          <img src="https://gamepedia.cursecdn.com/lolesports_gamepedia_en/5/58/Good_Game_Universitylogo_square.png?version=fc22e0041562d9245cf110e9dc93c6cb" alt="Avatar" class="avatar">
     </div>
-  
-    <div class="container">
-        <button type="button" onclick="">x</button>
-      <label for="uname"><b>Email</b></label>
-      <input type="text" placeholder="Enter Username" name="uname" required>
-  
-      <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" required>
-          
-      <button type="submit">Registrati</button>
+    <div>
+      <button type="button" class="btn">x</button>
     </div>
-  
-    
+    <div class="inputrow">
+      <input type="text" id="name" placeholder="Email"/>
+      <label class="ion-person" for="name"></label>
+    </div>
+    <div class="inputrow">
+      <input type="password" id="pass" placeholder="Password"/>
+      <label class="ion-locked" for="pass"></label>
+      <input type="submit" value="Registrati"/>
+    </div>
   </form>
-  </div>
-  </div>
+</div>
