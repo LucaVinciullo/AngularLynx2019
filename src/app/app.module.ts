@@ -10,9 +10,6 @@ import { RegisterComponent } from './components/register/register.component';
 import { DetailComponent } from './components/detail/detail.component';
 import { HomepageComponent } from './components/homepage/homepage.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
-
-
-
 import { CarouselComponent } from './components/carousel/carousel.component';
 // import { NgImageSliderModule, NgImageSliderComponent } from 'ng-image-slider';
 
