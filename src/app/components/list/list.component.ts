@@ -15,7 +15,8 @@ export class ListComponent implements OnInit {
 
   constructor(private listData: ListDataService, private router: Router, private listFilterService: ListFilterService) {
     this.list = listData.getList();
-    listFilterService.searchFilter$.subscribe( newValue => { // utilizzo nuovo valore 
+    listFilterService.searchFilter$.subscribe( newValue => { 
+      this.list = listData.getFilteredList(newValue) 
     }); 
   }
 

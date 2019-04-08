@@ -6,6 +6,7 @@ import { ListItem } from '../models/list-item'
 })
 export class ListDataService {
 
+
 private listData: ListItem [] = [
   { id: 1, title: 'Gold Boost', 
   description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat", 
@@ -43,12 +44,19 @@ private listData: ListItem [] = [
     return detail;
   }
   
-    getResidualList( id: number): ListItem[] {
-      const list: ListItem[] = this.listData.filter( item => {
-        return item.id != id
-      });
-      return list;
-      }  
+  getResidualList( id: number): ListItem[] {
+    const list: ListItem[] = this.listData.filter( item => {
+      return item.id != id
+    });
+    return list;
+  }  
+
+  getFilteredList(query: string): ListItem[] {
+    const list: ListItem [] = this.listData.filter ( item => {
+      return item.title.indexOf(query) != -1
+    });
+    return list;
+  }
       
   constructor() { }
 }

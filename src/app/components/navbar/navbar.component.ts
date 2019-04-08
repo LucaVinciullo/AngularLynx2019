@@ -12,7 +12,7 @@ import { ListFilterService } from 'src/app/services/list-filter.service';
 export class NavbarComponent implements OnInit {
 
   private listItm : ListMenu[]
-  history: string[] = [];
+  searchText: string;
 
   constructor(private list: ListMenuService, private route: Router, private listFilterService: ListFilterService) {
     this.listItm = list.getItemList();
