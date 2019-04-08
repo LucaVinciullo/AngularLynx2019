@@ -1,11 +1,12 @@
 import { Injectable } from '@angular/core';
 import { ListItem } from '../models/list-item'
-import { getListeners } from '@angular/core/src/render3/discovery_utils';
+import { Subject }    from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ListDataService {
+
 private listData: ListItem [] = [
   { id: 1, title: 'Gold Boost', 
   description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat", 
@@ -31,6 +32,7 @@ private listData: ListItem [] = [
   price: 250
   },
 ]
+  
   getList(): ListItem[] {
     return this.listData;
   }
@@ -49,5 +51,8 @@ private listData: ListItem [] = [
       return list;
       }
 
+    private searchBar = new Subject<string>();
+    public searchBar$ = this.searchBar.asObservable();  
+      
   constructor() { }
 }
