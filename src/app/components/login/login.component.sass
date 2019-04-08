@@ -1,7 +1,9 @@
+.btn-container
+  margin-left: 200px
 .btn
-  position: relative
+
+  background-color: red
   text-align: center
-  float: right
   height: 50px 
   width: 50px
   pbackground-color: #4CAF50
@@ -11,12 +13,17 @@
   text-decoration: none
   display: inline-block
   font-size: 16px
-  margin: 4px 2px
+  margin: 4px 2px 
   cursor: pointer
-  
+  border-radius: 100%
+
+.btn:after
+  clear: both
+
+
 .imgcontainer 
   text-align: center
-  margin: 24px 0 12px 0
+  margin: 24px 0 12px
 
   
 .signin  
@@ -136,27 +143,25 @@ input[type="checkbox"] + label:after
   content: "" 
   position: absolute 
   display: block 
-  height: 16px 
+  height: 10px 
   -webkit-border-radius: 30px 
   -moz-border-radius: 30px 
   border-radius: 30px 
  
 input[type="checkbox"] + label:before  
-  left: 0 
-  top: -2px 
+  left: 4px 
+  top: 3px 
   width: 30px 
   background: rgba(0,0,0,0.3) 
-  -webkit-box-shadow: inset 1px 1px 1px 1px rgba(0,0,0,0.3) 
-  -moz-box-shadow: inset 1px 1px 1px 1px rgba(0,0,0,0.3) 
-  box-shadow: inset 1px 1px 1px 1px rgba(0,0,0,0.3) 
+
  
 input[type="checkbox"] + label:after  
   opacity: 0.3 
   background: #fff 
   top: 0px 
   left: 2px 
-  height: 12px 
-  width: 12px 
+  height: 16px 
+  width: 16px 
   -webkit-transition: all 200ms 0 ease 
   -moz-transition: all 200ms 0 ease 
   transition: all 200ms 0 ease 
