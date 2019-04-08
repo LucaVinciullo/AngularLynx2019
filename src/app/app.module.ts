@@ -34,11 +34,7 @@ import { NgImageSliderModule, NgImageSliderComponent } from 'ng-image-slider';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-<<<<<<< HEAD
     NgImageSliderModule
-=======
-
->>>>>>> 923a6caffea4cf341e90400118d91a1d1ef6e678
   ],
   providers: [],
   bootstrap: [AppComponent]
