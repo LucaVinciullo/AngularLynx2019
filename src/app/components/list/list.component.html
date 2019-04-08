@@ -2,16 +2,29 @@
     <ul>
         <ng-container *ngFor="let item of list">
             <li>
-                <div class="container">
-                    <div class="logoContainer">
-                        <img src={{item.image}} class="logo">
+                <a routerLink='/detail'>
+                    <div class="container">
+                        <div class="logoContainer">
+                            <img src={{item.image}} class="logo">
+                        </div>
+                        <div class="listItem">
+                            <p class="title">{{item.title}}</p>
+                            <p>{{item.description}}</p>
+                        </div>
+                        <div class="icons">
+                            <i class="material-icons">favorite_border</i>
+                            <i class="material-icons">favorite</i>
+                            <i class="material-icons">share</i>
+                            <i class="material-icons">more_vert</i>
+                        </div>
                     </div>
-                    <div class="listItem">
-                        <p class="title">{{item.title}}</p>
-                        <p>{{item.description}}</p>
-                    </div>
-                    <div class="icons">
-                        <i class="material-icons" (click)="toggleFavorite(item.id)">
+                </a>
+                <div class="listItem">
+                    <p class="title">{{item.title}}</p>
+                    <p>{{item.description}}</p>
+                </div>
+                <div class="icons">
+                    <i class="material-icons" (click)="toggleFavorite(item.id)">
                             <ng-container *ngIf="!item.favorite; else other_content">
                                 favorite_border
                             </ng-container>
@@ -20,11 +33,6 @@
                             </ng-template>
                         </i>
 
-                        <i class="material-icons">share</i>
-                        <i class="material-icons">more_vert</i>
-                    </div>
+                    <i class="material-icons">share</i>
+                    <i class="material-icons">more_vert</i>
                 </div>
-            </li>
-        </ng-container>
-    </ul>
-</div>
