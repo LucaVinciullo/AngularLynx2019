@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ListItem } from '../../models/list-item';
 import { ListDataService } from '../../services/list-data.service';
+import { Observable } from 'rxjs';
+import { Params, ActivatedRouteSnapshot, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-detail',
@@ -13,10 +15,12 @@ export class DetailComponent implements OnInit {
   item: ListItem;
   id: number;
   residualList: ListItem[];
+  snapshot: ActivatedRouteSnapshot;
 
   imageObject: Array<object> = [];
-  constructor(private listDataService: ListDataService) {
-    this.id = 1 //this.route.snapshot.params['id'];
+
+  constructor(private listDataService: ListDataService, private route: ActivatedRoute) {
+    this.id = this.route.snapshot.params['id'];
     this.item = listDataService.getItem(this.id);
     this.residualList = listDataService.getResidualList(this.id);
 
@@ -34,10 +38,12 @@ export class DetailComponent implements OnInit {
       title: this.residualList[2].title
     }
     ];
+    
+  }
+    
+ngOnInit() {
   }
 
-  ngOnInit() {
-  }
   showCarousel(id: number) {
     this.visibleId = id;
     this.residualList = this.listDataService.getResidualList(this.id);
