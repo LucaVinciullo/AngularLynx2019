@@ -27,7 +27,10 @@ import { CarouselComponent } from './components/carousel/carousel.component';
     RegisterComponent,
     HomepageComponent,
     NavbarComponent,
+<<<<<<< HEAD
  
+=======
+>>>>>>> Homepage
     CarouselComponent
   ],
   imports: [
