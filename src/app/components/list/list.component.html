@@ -19,10 +19,6 @@
                         </div>
                     </div>
                 </a>
-                <div class="listItem">
-                    <p class="title">{{item.title}}</p>
-                    <p>{{item.description}}</p>
-                </div>
                 <div class="icons">
                     <i class="material-icons" (click)="toggleFavorite(item.id)">
                             <ng-container *ngIf="!item.favorite; else other_content">
@@ -36,3 +32,7 @@
                     <i class="material-icons">share</i>
                     <i class="material-icons">more_vert</i>
                 </div>
+            </li>
+        </ng-container>
+    </ul>
+</div>
