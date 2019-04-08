@@ -12,10 +12,6 @@ export class ListFilterService {
   searchString(query: string) {
     this.searchFilter.next(query);
   }
- 
-  searchConfirmation(query: string) {
-    this.searchFilter.next(query);
-  }
 
   constructor() { }
 }

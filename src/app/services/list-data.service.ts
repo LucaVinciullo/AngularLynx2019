@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { ListItem } from '../models/list-item'
-import { Subject }    from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -49,10 +48,7 @@ private listData: ListItem [] = [
         return item.id != id
       });
       return list;
-      }
-
-    private searchBar = new Subject<string>();
-    public searchBar$ = this.searchBar.asObservable();  
+      }  
       
   constructor() { }
 }

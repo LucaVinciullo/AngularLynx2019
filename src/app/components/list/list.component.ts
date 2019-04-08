@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ListDataService } from '../../services/list-data.service';
 import { ListItem } from 'src/app/models/list-item';
 import { Router } from '@angular/router';
-import { ListFilter, ListFilterService } from '../../services/list-filter.service';
+import { ListFilterService } from '../../services/list-filter.service';
 
 
 @Component({
@@ -13,12 +13,10 @@ import { ListFilter, ListFilterService } from '../../services/list-filter.servic
 export class ListComponent implements OnInit {
   private list: ListItem[];
 
-  constructor(private listData: ListDataService, private router: Router, private listFilter: ListFilterService) {
+  constructor(private listData: ListDataService, private router: Router, private listFilterService: ListFilterService) {
     this.list = listData.getList();
-    listFilter.searchFilter$.subscribe(
-      query => {
-        this.history.push(`${astronaut} confirmed the mission`);
-      });
+    listFilterService.searchFilter$.subscribe( newValue => { // utilizzo nuovo valore 
+    }); 
   }
 
    goToDetail(){
