@@ -18,8 +18,8 @@ export class NavbarComponent implements OnInit {
     this.listItm = list.getItemList();
    }
 
-   search(query: string){
-    this.listFilterService.searchString(query);
+   search(){
+    this.listFilterService.searchString(this.searchText);
    }
 
    routeIsActive(routePath: string) {

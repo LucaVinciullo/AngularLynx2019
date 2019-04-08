@@ -4,7 +4,7 @@
 <div style="overflow: auto">
     <div class="searchBar" *ngIf="routeIsActive('/list')">
         <input type="search" placeholder="Cerca" [(ngModel)]="searchText">
-        <span><i (click)="search(searchText)" class="material-icons">search</i></span>
+        <span><i (click)="search()" class="material-icons">search</i></span>
     </div>
     <ul>
         <ng-container *ngFor="let item of listItm">
