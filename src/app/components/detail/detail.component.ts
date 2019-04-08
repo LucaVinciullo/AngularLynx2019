@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ListItem } from '../../models/list-item';
 import { ListDataService } from '../../services/list-data.service';
+import { Observable } from 'rxjs';
+import { Params, ActivatedRouteSnapshot, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-detail',
@@ -14,10 +16,15 @@ item : ListItem;
 id : number;
 residualList: ListItem[];
 
-  constructor(private listDataService: ListDataService) {
-    this.id = 1 //this.route.snapshot.params['id'];
+
+snapshot: ActivatedRouteSnapshot;
+
+
+  constructor(private listDataService: ListDataService, private route: ActivatedRoute) {
+    this.id = this.route.snapshot.params['id'];
     this.item = listDataService.getItem(this.id);
     this.residualList = listDataService.getResidualList(this.id);
+    
   }
 
   ngOnInit() {
