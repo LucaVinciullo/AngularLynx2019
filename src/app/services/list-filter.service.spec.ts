@@ -1,11 +1,11 @@
 import { TestBed } from '@angular/core/testing';
-import { ListMenuService } from './list-menu.service';
+import { ListFilterService } from './list-filter.service';
 
-describe('ListMenuService', () => {
+describe('ListFilterService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));
 
   it('should be created', () => {
-    const service: ListMenuService = TestBed.get(ListMenuService);
+    const service: ListFilterService = TestBed.get(ListFilterService);
     expect(service).toBeTruthy();
   });
 });

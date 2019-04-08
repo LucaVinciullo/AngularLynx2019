@@ -1,9 +1,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
-<div>
+<div style="overflow: auto">
     <div class="searchBar" *ngIf="routeIsActive('/list')">
-        <input type="text" placeholder="search">
+        <input type="search" placeholder="Cerca" [(ngModel)]="searchText">
+        <span><i (click)="search()" class="material-icons">search</i></span>
     </div>
     <ul>
         <ng-container *ngFor="let item of listItm">

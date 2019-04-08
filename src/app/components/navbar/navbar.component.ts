@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 import { ListMenu } from 'src/app/models/list-menu';
 import { ListMenuService } from 'src/app/services/list-menu.service';
+import { ListFilterService } from 'src/app/services/list-filter.service';
 
 @Component({
   selector: 'app-navbar',
@@ -11,10 +12,14 @@ import { ListMenuService } from 'src/app/services/list-menu.service';
 export class NavbarComponent implements OnInit {
 
   private listItm : ListMenu[]
+  searchText: string;
 
-
-  constructor(private list: ListMenuService, private route: Router) {
+  constructor(private list: ListMenuService, private route: Router, private listFilterService: ListFilterService) {
     this.listItm = list.getItemList();
+   }
+
+   search(){
+    this.listFilterService.searchString(this.searchText);
    }
 
    routeIsActive(routePath: string) {

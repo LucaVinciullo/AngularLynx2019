@@ -1,11 +1,12 @@
 import { TestBed } from '@angular/core/testing';
-import { ListMenuService } from './list-menu.service';
 
-describe('ListMenuService', () => {
+import { LoginService } from './login.service';
+
+describe('LoginService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));
 
   it('should be created', () => {
-    const service: ListMenuService = TestBed.get(ListMenuService);
+    const service: LoginService = TestBed.get(LoginService);
     expect(service).toBeTruthy();
   });
 });
