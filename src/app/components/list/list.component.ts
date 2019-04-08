@@ -15,8 +15,8 @@ export class ListComponent implements OnInit {
 
   constructor(private listData: ListDataService, private router: Router, private listFilter: ListFilterService) {
     this.list = listData.getList();
-    list.missionConfirmed$.subscribe(
-      astronaut => {
+    listFilter.searchFilter$.subscribe(
+      query => {
         this.history.push(`${astronaut} confirmed the mission`);
       });
   }
