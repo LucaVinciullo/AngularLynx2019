@@ -14,7 +14,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 
 
 import { CarouselComponent } from './components/carousel/carousel.component';
-import { NgImageSliderModule, NgImageSliderComponent } from 'ng-image-slider';
+// import { NgImageSliderModule, NgImageSliderComponent } from 'ng-image-slider';
 
 
 @NgModule({
@@ -34,7 +34,7 @@ import { NgImageSliderModule, NgImageSliderComponent } from 'ng-image-slider';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    NgImageSliderModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
