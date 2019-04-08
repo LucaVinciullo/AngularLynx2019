@@ -14,7 +14,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 
 
 import { CarouselComponent } from './components/carousel/carousel.component';
-import { ProfiloComponent } from './profilo/profilo.component';
+
+import { ProfileComponent } from './components/profile/profile.component';
 
 
 @NgModule({
@@ -29,7 +30,7 @@ import { ProfiloComponent } from './profilo/profilo.component';
     HomepageComponent,
     NavbarComponent,
     CarouselComponent,
-    ProfiloComponent
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
