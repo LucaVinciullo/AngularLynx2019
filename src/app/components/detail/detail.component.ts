@@ -20,7 +20,7 @@ export class DetailComponent implements OnInit {
   snapshot: ActivatedRouteSnapshot;
 
   imageObject: Array<object> = [];
-
+image : Array<object> = [];
   constructor(private listDataService: ListDataService, private route: ActivatedRoute, private _route: Router) {
     this.id = this.route.snapshot.params['id'];
     this.item = listDataService.getItem(Number(this.id));
@@ -52,6 +52,7 @@ export class DetailComponent implements OnInit {
       console.log(params.username);
       this.id = params.id;
     });
+    this.image = this.imageObject;
   }
   showCarousel(id: number) {
     this.visibleId = id;

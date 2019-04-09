@@ -6,15 +6,16 @@ import { FeedbackComponent } from './components/feedback/feedback.component';
 import { DetailComponent } from './components/detail/detail.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
+import { AuthGuard } from './services/routeguard';
 
 
 
 const routes: Routes = [
   {path: 'login', component: LoginComponent},
-  {path: 'homepage', component: HomepageComponent},
-  {path: 'feedback', component: FeedbackComponent},
-  {path: 'detail/:id', component: DetailComponent},
-  {path:'list', component: ListComponent},
+  {path: 'homepage', component: HomepageComponent, canActivate:[AuthGuard]},
+  {path: 'feedback', component: FeedbackComponent, canActivate:[AuthGuard]},
+  {path: 'detail/:id', component: DetailComponent, canActivate:[AuthGuard]},
+  {path:'list', component: ListComponent, canActivate:[AuthGuard]},
   {path: '', redirectTo: '/login', pathMatch:"full"},
   {path: 'register', component: RegisterComponent}
 ]; 

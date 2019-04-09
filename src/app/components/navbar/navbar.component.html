@@ -10,6 +10,8 @@
             <li>
                 <a [routerLink]="item.path" routerLinkActive="router-link-active">{{item.title}}</a>
             </li>
+
         </ng-container>
+        <button (click)="doLogout()">Esci</button>
     </ul>
 </div>
