@@ -2,18 +2,12 @@ import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { User } from '../models/user';
 import { RegisterService } from './register.service';
+import { Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class LoginService {
-  authentication : boolean = false;
-  private loginService = new Subject<string>();
-  loginService$ = this.loginService.asObservable();
-  
-  loginEvent() {
-    this.loginService.next();
-  }
 
   constructor(private router: Router , private userService : RegisterService) { }
   users : User [];
