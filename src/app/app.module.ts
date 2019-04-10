@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ListComponent } from './components/list/list.component';
@@ -11,9 +11,9 @@ import { DetailComponent } from './components/detail/detail.component';
 import { HomepageComponent } from './components/homepage/homepage.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
-// import { NgImageSliderModule, NgImageSliderComponent } from 'ng-image-slider';
-
 import { ProfileComponent } from './components/profile/profile.component';
+import { NgImageSliderModule, NgImageSliderComponent } from 'ng-image-slider';
+import { AuthGuard } from './services/routeguard';
 
 
 @NgModule({
@@ -34,9 +34,11 @@ import { ProfileComponent } from './components/profile/profile.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    
+    NgImageSliderModule,
+    ReactiveFormsModule
+  
   ],
-  providers: [],
+  providers: [AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

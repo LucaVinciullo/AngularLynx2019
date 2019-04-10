@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ListItem } from '../../models/list-item';
 import { ListDataService } from '../../services/list-data.service';
-import { Observable } from 'rxjs';
-import { Params, ActivatedRouteSnapshot, ActivatedRoute } from '@angular/router';
+import { Params, ActivatedRouteSnapshot, ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-detail',
@@ -16,15 +15,17 @@ export class DetailComponent implements OnInit {
   id: number;
   residualList: ListItem[];
 
-  imageObject: Array<object> = [];
 
   snapshot: ActivatedRouteSnapshot;
 
-
-  constructor(private listDataService: ListDataService, private route: ActivatedRoute) {
+  imageObject: Array<object> = [];
+image : Array<object> = [];
+  constructor(private listDataService: ListDataService, private route: ActivatedRoute, private _route: Router) {
     this.id = this.route.snapshot.params['id'];
-    this.item = listDataService.getItem(this.id);
+    this.item = listDataService.getItem(Number(this.id));
     this.residualList = listDataService.getResidualList(this.id);
+
+
     this.imageObject = [{
       image: this.residualList[0].image,
       thumbImage: this.residualList[0].image,
@@ -39,13 +40,24 @@ export class DetailComponent implements OnInit {
       title: this.residualList[2].title
     }
     ];
+
+    
   }
 
+ 
+
   ngOnInit() {
+    this.route.params.subscribe(params => {
+      console.log(params.username);
+      this.id = params.id;
+    });
+    this.image = this.imageObject;
   }
   
   showCarousel(id: number) {
     this.visibleId = id;
     this.residualList = this.listDataService.getResidualList(this.id);
   }
+
+  
 }

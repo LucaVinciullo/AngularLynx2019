@@ -8,9 +8,9 @@ export class AuthGuard implements CanActivate{
     
     
     canActivate() {
-        if(sessionStorage.length >= 3) {
-            return true;
-        }
+    return(!! sessionStorage.getItem("user"));
     }
+
+
     
 }

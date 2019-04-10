@@ -2,36 +2,31 @@
     <ul>
         <ng-container *ngFor="let item of list">
             <li>
-                <a routerLink='/detail'>
-                    <div class="container">
-                        <div class="logoContainer">
-                            <img src={{item.image}} class="logo">
-                        </div>
-                        <div class="listItem">
-                            <p class="title">{{item.title}}</p>
-                            <p>{{item.description}}</p>
-                        </div>
-                        <div class="icons">
-                            <i class="material-icons">favorite_border</i>
-                            <i class="material-icons">favorite</i>
-                            <i class="material-icons">share</i>
-                            <i class="material-icons">more_vert</i>
-                        </div>
+                <div class="container">
+                    <div class="logoContainer">
+                        <img src={{item.image}} class="logo">
                     </div>
-                </a>
-                <div class="icons">
-                    <i class="material-icons" (click)="toggleFavorite(item.id)">
-                            <ng-container *ngIf="!item.favorite; else other_content">
-                                favorite_border
-                            </ng-container>
-                            <ng-template #other_content>
-                                favorite
-                            </ng-template>
-                        </i>
+                    <div class="listItem">
+                        <p class="title">{{item.title}}</p>
+                        <p>{{item.description}}</p>
+                    </div>
+                    <div class="icons">
+                        <i class="material-icons" (click)="toggleFavorite(item.id)">
+                                <ng-container *ngIf="!item.favorite; else other_content">
+                                    favorite_border
+                                </ng-container>
+                                <ng-template #other_content>
+                                    favorite
+                                </ng-template>
+                            </i>
 
-                    <i class="material-icons">share</i>
-                    <i class="material-icons">more_vert</i>
+                        <i class="material-icons">share</i>
+                        <a [routerLink]="['/detail', item.id]" routerLinkActive="router-link-active">
+                            <i class="material-icons">more_verts</i>
+                        </a>
+                    </div>
                 </div>
+
             </li>
         </ng-container>
     </ul>

@@ -1,6 +1,6 @@
 <div class="container">
     <div class="left-column">
-        <div class="left-align">
+        <div class="left-align" *ngIf="item">
             <h1>{{item.title}}</h1>
             <h4>{{item.description}}</h4>
         </div>
@@ -25,16 +25,15 @@
                 </ng-container>
             </div>
         </div>
-        <div class="central-column">
-            <img src="https://hdqwalls.com/download/kda-akali-lol-art-v9-1440x2960.jpg">
-        </div>
-        <div class="right-column">
-            <div class="placeholder"> </div>
-            <div class="left-align">
-                <h3 class="price">€ {{item.price}}</h3>
-                <p class="payment-disclaimer">Assicuriamo a tutti i nostri utenti la sicurezza dei pagamenti, garantita attraverso la collaborazione con l'istituto di credito XYZ e il servizio PayPal</p>
-            </div>
-            <button>Comprami, sono in vendita</button>
+    </div>
+    <div class="central-column">
+        <img src="https://hdqwalls.com/download/kda-akali-lol-art-v9-1440x2960.jpg">
+    </div>
+    <div class="right-column">
+        <div class="placeholder"> </div>
+        <div class="left-align">
+            <h3 class="price">€ {{item?.price}}</h3>
+            <p class="payment-disclaimer">Assicuriamo a tutti i nostri utenti la sicurezza dei pagamenti, garantita attraverso la collaborazione con l'istituto di credito XYZ e il servizio PayPal</p>
         </div>
 
     </div>
