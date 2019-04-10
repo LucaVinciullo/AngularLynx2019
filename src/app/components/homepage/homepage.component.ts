@@ -8,6 +8,7 @@ import { User } from 'src/app/models/user';
 })
 export class HomepageComponent implements OnInit {
      user : User;
+     homepageText: string = "testo che descrive in modo accattivante quello che facciamo per estorcere soldi dagli altri"
   constructor() { }
 
   ngOnInit() {

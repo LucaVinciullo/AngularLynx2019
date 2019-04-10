@@ -1,6 +1,25 @@
-.container
-    float: left
+div.container
+    margin: 15px
+    text-align: center
+    display: grid
+    display: -ms-grid
+    grid-template-columns: 50% 50%
+    -ms-grid-columns: 50% 50%
 
+div.left-column
+    grid-column: 1
+    -ms-grid-column: 1
+
+div.right-column
+    grid-column: 2
+    -ms-grid-column: 2
+
+div.placeholder
+    height: 200px
+
+div.icon-container
+    text-align: left
+    padding-left: 30px
 .footer 
     position: fixed
     left: 0
@@ -22,9 +41,8 @@
 .fling-minislide img 
     animation: fling-minislide 15s infinite
     opacity: 0
-    width: 100%
+    width: 75%
     height: auto
-    position: absolute
 
 @keyframes fling-minislide 
     25% 
