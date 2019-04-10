@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { User } from 'src/app/models/user';
 
 @Component({
   selector: 'app-homepage',
@@ -6,11 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./homepage.component.sass']
 })
 export class HomepageComponent implements OnInit {
-     nome : string;
+     user : User;
   constructor() { }
 
   ngOnInit() {
-    this.nome = sessionStorage.getItem('user');
+    this.user = JSON.parse(sessionStorage.getItem('user')) ;
   }
 
 }

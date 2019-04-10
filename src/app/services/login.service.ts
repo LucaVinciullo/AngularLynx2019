@@ -1,24 +1,25 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { User } from '../models/user';
+import { RegisterService } from './register.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class LoginService {
 
-  constructor(private router: Router) { }
+  constructor(private router: Router , private userService : RegisterService) { }
   users : User [];
   
 
   doLogin(nome: string, password: string) {
-  // this.retrieveData();
- //  const user = this.users.find(utenti=>{
-    // return utenti.name === nome;
- //  })
-  // if(user)
+    this.users = this.userService.retrieveData();
+  const user = this.users.find(utenti=>{
+   return utenti.name === nome;
+   })
+  if(user)
 
-  sessionStorage.setItem("user", nome); //stringify
+  sessionStorage.setItem("user", JSON.stringify(user)); //stringify
   this.router.navigateByUrl('/homepage');}
   
 
@@ -27,9 +28,5 @@ export class LoginService {
     this.router.navigateByUrl('/login');
   }
 
- /* retrieveData(){
-    this.users = !! localStorage.getItem('usersReg') ? JSON.parse(localStorage.getItem('usersReg')) : [];
-    
-  }*/
 }
 

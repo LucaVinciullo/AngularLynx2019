@@ -10,16 +10,24 @@ import { UseExistingWebDriver } from 'protractor/built/driverProviders';
 export class RegisterService {
 
   constructor(private route: Router) { 
-
-  }
-users : User [];
-  doRegister(userValue){
-    if(userValue){
-      this.users.push(userValue);
-   localStorage.setItem('usersReg' , JSON.stringify(this.users));
-   this.route.navigateByUrl('login');
-    }
-  
-  }
 }
 
+
+doRegister(valueForm : User){
+  let userReg = this.retrieveData();
+  if(valueForm){
+    userReg.push(valueForm);
+    localStorage.setItem('userReg', JSON.stringify(userReg));
+    this.route.navigateByUrl('login');
+    
+  }
+}
+  
+
+retrieveData() : Array<User>{
+  const users = localStorage.getItem('userReg');
+  if(users)
+     return JSON.parse(users);
+  return [];
+}
+}
