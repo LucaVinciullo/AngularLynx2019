@@ -8,8 +8,9 @@
     </div>
     <ul>
         <ng-container *ngFor="let item of listItm">
-            <li>
-                <a [routerLink]="item.path" routerLinkActive="router-link-active">{{item.title}}</a>
+
+            <li [routerLink]="item.path" routerLinkActive="active">
+                {{item.title}}
             </li>
 
         </ng-container>
