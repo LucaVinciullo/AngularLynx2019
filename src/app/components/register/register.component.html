@@ -2,21 +2,21 @@
 <link href="https://code.ionicframework.com/ionicons/1.4.1/css/ionicons.min.css" rel="stylesheet" type="text/css" />
 <div class="signin cf">
 
-    <form>
+    <form [formGroup]="register" (ngSubmit)="doReg()">
         <div class="imgcontainer">
             <img src="https://gamepedia.cursecdn.com/lolesports_gamepedia_en/5/58/Good_Game_Universitylogo_square.png?version=fc22e0041562d9245cf110e9dc93c6cb" alt="Avatar" class="avatar">
         </div>
         <div>
-            <button type="button" class="btn">x</button>
+            <button type="button" class="btn" (click)="goBack()">x</button>
         </div>
         <div class="inputrow">
-            <input type="text" id="name" placeholder="Email" />
+            <input type="text" id="name" placeholder="Email" formControlName="name" />
             <label class="ion-person" for="name"></label>
         </div>
         <div class="inputrow">
-            <input type="password" id="pass" placeholder="Password" />
+            <input type="password" id="pass" placeholder="Password" formControlName="password" />
             <label class="ion-locked" for="pass"></label>
-        <div>
-            <input type="submit" value="Registrati" />
-        
-</div>
+            <div>
+                <input type="submit" value="Registrati" />
+
+            </div>
