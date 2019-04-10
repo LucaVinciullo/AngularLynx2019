@@ -13,6 +13,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
 // import { NgImageSliderModule, NgImageSliderComponent } from 'ng-image-slider';
 
+import { ProfileComponent } from './components/profile/profile.component';
+
 
 @NgModule({
   declarations: [
@@ -25,7 +27,8 @@ import { CarouselComponent } from './components/carousel/carousel.component';
     RegisterComponent,
     HomepageComponent,
     NavbarComponent,
-    CarouselComponent
+    CarouselComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,

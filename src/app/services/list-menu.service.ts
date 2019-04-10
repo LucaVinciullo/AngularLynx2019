@@ -10,7 +10,7 @@ export class ListMenuService {
     {id : 2, title: 'List', path:'/list'},
     {id : 3, title: 'Cards', path:'/homepage'},
     {id : 4, title: 'Feedback', path:'/feedback'},
-    {id : 5, title: 'Profilo', path:'/homepage'},
+    {id : 5, title: 'Profilo', path:'/profile'},
     {id : 6, title: 'Esci', path:'/homepage'},
   ]
   constructor() { }
