@@ -1,25 +1,25 @@
 <div class="container">
-    <h1 class="label">">Benvenuto</h1>
-    <label class="label"><h3>Luca Alicata</h3></label>
+    <h1 class="label">Benvenuto</h1>
+    <label class="label"><h3>{{user.name}}</h3></label>
     <div class="imgcontainer">
         <img src="https://www.nanopress.it/wp-content/uploads/2018/02/Immagini-profilo-Facebook.jpg" alt="Avatar" class="avatar">
     </div>
-  <div class="container">
-      <div class="row">
-       <div class="columnright">
-          <h5>Nome</h5>
-          <h5>Cognome</h5>
-          <h5>Gender</h5>
-          <h5>Email</h5>
-          <h5>Telefono</h5>
+    <div class="container">
+        <div class="row">
+            <div class="columnright">
+                <h5>Nome</h5>
+                <h5>Password</h5>
+                <h5>Gender</h5>
+                <h5>Email</h5>
+                <h5>Telefono</h5>
+            </div>
+            <div class="columnleft">
+                <h5><b>{{user.name}}</b></h5>
+                <h5><b>{{user.password}}</b></h5>
+                <h5><b>Maschio</b></h5>
+                <h5><b>{{user.email}}</b></h5>
+                <h5><b>{{user.phone}}</b></h5>
+            </div>
         </div>
-        <div class="columnleft">
-          <h5><b>Luca</b></h5>
-          <h5><b>Alicata</b></h5>
-          <h5><b>Maschio</b></h5>
-          <h5><b>Column 2</b></h5>
-          <h5><b>Column 2</b></h5>
-        </div>
-      </div>
-   </div>
+    </div>
 </div>

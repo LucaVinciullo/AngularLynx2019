@@ -9,8 +9,7 @@ export class ListMenuService {
     {id: 1, title: 'Homepage', path:'/homepage' },
     {id : 2, title: 'List', path:'/list'},
     {id : 4, title: 'Feedback', path:'/feedback'},
-    {id : 5, title: 'Profilo', path:'/profile'},
-    {id : 6, title: 'Esci', path:'/homepage'},
+    {id : 5, title: 'Profilo', path:'/profile'}
   ]
   constructor() { }
 
