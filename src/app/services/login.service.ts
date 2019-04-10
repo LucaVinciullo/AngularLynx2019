@@ -25,6 +25,8 @@ export class LoginService {
 
   doLogout(){
     sessionStorage.clear();
+
+    
     this.router.navigateByUrl('/login');
   }
 
