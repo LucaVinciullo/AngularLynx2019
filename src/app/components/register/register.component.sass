@@ -13,7 +13,7 @@
   margin-left: 185px
   cursor: pointer
   border-radius: 100%
-  margin-left: 200px
+  margin-left: 195px
   
 .imgcontainer 
   text-align: center
@@ -96,7 +96,24 @@
 .signin input[type="password"]:focus + label:before  
   opacity: 1 
  
-input[type="submit"]  
+.signin input[type="submit"]:hover  
+  background-color: #5e98a8 
+ 
+.signin input[type="submit"]:active  
+  background-color: #4a7b89 
+ 
+.cf:before,
+.cf:after  
+  content: " " 
+  display: table 
+ 
+.cf:after  
+  clear: both 
+ 
+.cf  
+  *zoom: 1 
+
+#registration-button
   -webkit-appearance: none 
   text-align: center
   height: 50px 
@@ -111,20 +128,3 @@ input[type="submit"]
   -webkit-border-radius: 5px 
   -moz-border-radius: 5px 
   border-radius: 30px 
- 
-input[type="submit"]:hover  
-  background-color: #5e98a8 
- 
-input[type="submit"]:active  
-  background-color: #4a7b89 
- 
-.cf:before,
-.cf:after  
-  content: " " 
-  display: table 
- 
-.cf:after  
-  clear: both 
- 
-.cf  
-  *zoom: 1 
