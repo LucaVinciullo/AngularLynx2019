@@ -9,7 +9,15 @@ import { UseExistingWebDriver } from 'protractor/built/driverProviders';
 })
 export class RegisterService {
 
-  constructor(private route: Router) { 
+  constructor(private route: Router) {
+    let user: User = {
+      name:"Cris",
+      surname: "Cia",
+      password: "password",
+      email: "string@gmail.com",
+      phone: "1234567890"      
+    }
+   this.doRegister(user);
 }
 
 
