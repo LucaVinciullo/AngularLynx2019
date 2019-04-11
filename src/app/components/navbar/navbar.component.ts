@@ -31,6 +31,8 @@ export class NavbarComponent implements OnInit {
    routeIsActive(routePath: string) {
     return this.route.url === routePath;
 }
+
+
   ngOnInit() {
     this.user = JSON.parse(sessionStorage.getItem('user')) ;
   }
