@@ -19,7 +19,12 @@ export class HomepageComponent implements OnInit {
 
   ngOnInit() {
     this.user = JSON.parse(sessionStorage.getItem('user')) ;
-
   }
 
+  showText(i: number){
+    for (let item of this.texts) {
+      item.show = false
+    }
+    this.texts[i].show = true;
+  }
 }

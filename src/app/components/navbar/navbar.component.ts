@@ -5,6 +5,7 @@ import { ListMenuService } from 'src/app/services/list-menu.service';
 import { ListFilterService } from 'src/app/services/list-filter.service';
 import { LoginService } from 'src/app/services/login.service';
 import { routerNgProbeToken } from '@angular/router/src/router_module';
+import { User } from 'src/app/models/user';
 
 
 @Component({
@@ -16,7 +17,8 @@ export class NavbarComponent implements OnInit {
 
   private listItm : ListMenu[]
   searchText: string;
-
+  user : User;
+  
   constructor(private list: ListMenuService, private route: Router, private listFilterService: ListFilterService, private logout: LoginService) {
 
     this.listItm = list.getItemList();
@@ -30,6 +32,7 @@ export class NavbarComponent implements OnInit {
     return this.route.url === routePath;
 }
   ngOnInit() {
+    this.user = JSON.parse(sessionStorage.getItem('user')) ;
   }
 
   

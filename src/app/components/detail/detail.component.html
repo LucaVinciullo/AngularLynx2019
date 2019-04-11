@@ -13,16 +13,6 @@
                 <p>Non fermarti alla prima lega. I nostri servizi ti accompagnano fino alla realizzazione di tutti i tuoi sogni</p>
             </div>
             <div class="carousel-wrapper">
-                <ul>
-                    <ng-container *ngFor="let item of residualList">
-                        <ng-container *ngIf="firstTime || item.id == visibleId">
-                            <li><img src="{{item.image}}" class="carousel-image"> {{item.title}}</li>
-                        </ng-container>
-                    </ng-container>
-                </ul>
-                <ng-container *ngFor="let item of residualList">
-                    <button class="carousel-button" (click)="showCarousel(item.id)"></button>
-                </ng-container>
             </div>
         </div>
     </div>
