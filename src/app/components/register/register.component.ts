@@ -16,11 +16,11 @@ export class RegisterComponent implements OnInit {
 
   createForm(){
     this.register = this.fb.group({
-      name:['', Validators.required],
-      surname:['', Validators.required],
-      password:['', Validators.required],
-      email:['', Validators.required],
-      phone:['', Validators.required]
+      name:[null, Validators.required],
+      surname:[null, Validators.required],
+      password:[null, Validators.required],
+      email:[null, Validators.required],
+      phone:[null, Validators.required]
 
     });
   }
@@ -29,10 +29,12 @@ export class RegisterComponent implements OnInit {
     this.createForm();
   }
 
-
-   doReg(){
-     this.userService.doRegister(this.register.value);
-   }
+  doReg(){
+    if (this.register.valid){
+      this.userService.doRegister(this.register.value);
+    }
+  }
+   
   goBack(){
     this.router.navigateByUrl('/login');
   }
