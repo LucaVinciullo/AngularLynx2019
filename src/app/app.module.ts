@@ -16,6 +16,7 @@ import { NgImageSliderModule, NgImageSliderComponent } from 'ng-image-slider';
 import { AuthGuard } from './services/routeguard';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +29,7 @@ import { AuthGuard } from './services/routeguard';
     HomepageComponent,
     NavbarComponent,
     CarouselComponent,
-    ProfileComponent
+    ProfileComponent,
   ],
   imports: [
     BrowserModule,

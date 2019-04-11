@@ -1,4 +1,5 @@
 <div class="container">
+
     <div class="left-column">
         <div class="left-align" *ngIf="item">
             <h1>{{item.title}}</h1>
@@ -7,6 +8,7 @@
         <div>
             <div class="carousel-container">
                 <ng-image-slider [images]="imageObject" #nav></ng-image-slider>
+
             </div>
             <div class="carousel-text">
                 <h5>Scopri tutta la gamma dei nostri prodotti:</h5>
@@ -17,7 +19,7 @@
         </div>
     </div>
     <div class="central-column">
-        <img src="https://hdqwalls.com/download/kda-akali-lol-art-v9-1440x2960.jpg">
+        <img src="https://hdqwalls.com/download/kda-akali-lol-art-v9-1440x2960.jpg" id="akali">
     </div>
     <div class="right-column">
         <div class="placeholder"> </div>
@@ -27,3 +29,27 @@
         </div>
         <button>Comprami, sono in vendita</button>
     </div>
+</div>
+
+<div class="footer">
+    <ul>
+        <li>
+            <img src="https://img.icons8.com/color/48/000000/facebook.png">
+        </li>
+        <li>
+            <img src="https://img.icons8.com/color/48/000000/twitter-squared.png">
+        </li>
+        <li>
+            <img src="https://img.icons8.com/material-outlined/48/000000/instagram-new.png">
+        </li>
+        <li>
+            <img src="https://img.icons8.com/ios-glyphs/48/000000/pinterest.png">
+        </li>
+        <li>
+            <img src="https://img.icons8.com/ios-glyphs/48/000000/snapchat.png">
+        </li>
+        <li>
+            <span class="copyright">Copyright 2019 | Kana S.p.a.</span>
+        </li>
+    </ul>
+</div>
